@@ -12,6 +12,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         "Operating System :: OS Independent",
     ],
-    install_requires=["click", "pytz"],
+    install_requires=['tensorflow', 'numpy', 'customtkinter', 'tkinter', 'imageio'],
     entry_points={"console_scripts": ["keras_saver = src.main:main"]},
 )
