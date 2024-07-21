@@ -4,6 +4,9 @@ import tkinter as tk
 class base_window():
     root=ctk.CTk()
     def __init__(self):
+        """
+        Sets the window up.
+        """
         print(f"You have created a window from class {__name__}")
 
     def set_geometry(self, geo_str):
@@ -38,6 +41,7 @@ class base_window():
             self (customtkinter.CTk):
             *elements (args):
 
+        Given customtkinter widgets, this will set the widgets onto the window before placing them with place_elements.      
         """
         self.elements=elements
         print(elements)
@@ -50,7 +54,7 @@ class base_window():
             self (customtkinter.CTk):
             coordsList (2D list):
 
-        Takes in a 2D array to place elements.
+        Takes in a 2D array to place elements set on the base window.
         """
         #Check for list type
         if type(self.elements)==tuple and type(coordsList)==list:

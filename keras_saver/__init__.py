@@ -1,3 +1,8 @@
+"""
+Welcome to keras_saver, a library meant for your machine learning models to be turned into an interactive GUI with customtkinter.
+
+Glad to have you here!
+"""
 import tensorflow as tf
 import re
 import numpy as np
