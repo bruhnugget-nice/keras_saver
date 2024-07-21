@@ -9,9 +9,22 @@ import sys
 
 #Helper Functions
 def term_process():
+    """ Description of term_process: Terminates all processes."""
     sys.exit(0)
 
 def model_predict(model: tf.keras.Sequential, pred_label: ctk.CTkLabel, class_names):
+    """ 
+    Description of _names:
+
+    Args:
+        model (tf.keras.Sequential),
+        pred_label (ctk.CTkLabel),
+        class_names (list) 
+
+    Takes in an input vector from an image and converts it to a tensor with 3 channels.
+    Those 3 channels are for RGB purposes, so make sure to set your model to accept those.
+    """
+    
     #Read the file
     file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg;*.jpeg;*.png;")])
     file_path.replace("\\", "/")
@@ -34,9 +47,11 @@ def create_keras_window(model_path, class_names_arr, title="Keras Saver", geo_si
 
     Args:
         model_path (str):
-        *elements (args):
+        class_names_arr (list):
+        title="KerasSaver" (str):
+        geo_size="420x420" (str):
 
-    Creates a customizable window for loading in and using keras models.
+    Given a model path and the class names, this will set up a window for image prediction with keras.
     """
     #Set up the model
     new_model=load_keras_model(model_path)
