@@ -1,2 +1,0 @@
-[console_scripts]
-keras_saver = src.main:main
